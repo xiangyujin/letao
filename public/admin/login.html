@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="./lib/bootstrap-validator/css/bootstrapValidator.css">
+    <link rel="stylesheet" href="./lib/nprogress/nprogress.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <title>Document</title>
+</head>
+
+<body class="body_bg">
+    <div class="container">
+        <!-- 为了让面板缩小居中,占4份,再偏移4份 -->
+        <!--lg md xm xs pc端的时候怎么用?  -->
+        <div class="col-md-4 col-md-offset-4">
+            <!-- Bootstrap 组件里的面板,带标题的面板 -->
+            <!-- panel-primary css样式 这是个辅助类 情景背景色 背景变蓝色  -->
+            <div class="panel panel-primary mt_150">
+                <div class="panel-heading">
+                    <h4 class="text-center">后台管理系统</h4>
+                </div>
+                <!-- 身体内容 -->
+                <div class="panel-body">
+
+                    <!--Bootstrap css样式里的表单 -->
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                             <!-- for 与name 对应 是为了用户在点击文字的时候光标聚焦在输入框中 name的值要看接口文档设定 -->
+                            <label for="username" class="col-sm-3 control-label">用户名</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" name="username" id="username" placeholder="请输入用户名">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <!-- for 与name 对应 是为了用户在点击文字的时候光标聚焦在输入框中 name的值要看接口文档设定 -->
+                            <label for="password" class="col-sm-3 control-label">密码</label>
+                            <!-- 栅格份数,3,9分, -->
+                            <div class="col-sm-9">
+                                <input type="password" name="password" class="form-control" id="password" placeholder="请输入密码">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <!-- 偏移三分.右边留三份,左右浮动,就可以在两边 -->
+                            <div class="col-sm-offset-3 col-sm-6">
+                                <button type="reset" class="btn btn-default pull-left">重置</button>
+                                <!-- 登录的情景背景色 蓝色 -->
+                                <button type="submit" class="btn btn-primary pull-right">登录</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+</body>
+<script src="./lib/jquery/jquery.js"></script>
+<script src="./lib/bootstrap/js/bootstrap.js"></script>
+<script src="./lib/bootstrap-validator/js/bootstrapValidator.js"></script>
+<script src="./lib/nprogress/nprogress.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/login.js"></script>
+
+</html>
