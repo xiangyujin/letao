@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>乐淘商城-商品列表</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="lib/mui/css/mui.css">
+    <link rel="stylesheet" href="lib/fa/css/font-awesome.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/searchList.css">
+
+</head>
+
+<body>
+
+    <div class="lt_container">
+
+        <div class="lt_header">
+            <!-- href 后面跟跳转地址 javascript:表示页面不跳转  后面跟js代码,会执行 -->
+            <a class="icon_left" href="javascript:history.go(-1)">
+                <span class="mui-icon mui-icon-back"></span>
+            </a>
+            <h4>搜索中心</h4>
+
+        </div>
+        <!-- 内容部分 -->
+        <div class="lt_main">
+            <!-- 搜索 -->
+            <div class="lt_search">
+                <input type="text" placeholder="请输入搜索关键字" class="search_input">
+                <button class="mui-btn mui-btn-blue search_btn">搜索</button>
+
+            </div>
+           
+            <!-- 排序 -->
+            <div class="lt_sort">
+                    <ul>
+                      <li>
+                        <a href="javascript:;">
+                          <span>上架时间</span>
+                          <span class="fa fa-angle-down"></span>
+                        </a>
+                      </li>
+                      <!-- data-tupe  为了发送请求的时候得到参数,精髓 -->
+                      <li data-type="price">
+                        <a href="javascript:;">
+                          <span>价格</span>
+                          <span class="fa fa-angle-down"></span>
+                        </a>
+                      </li>
+        
+                      <li data-type="num">
+                        <a href="javascript:;">
+                          <span>库存</span>
+                          <span class="fa fa-angle-down"></span>
+                        </a>
+                      </li>
+        
+                      <li>
+                        <a href="javascript:;">
+                          <span>折扣</span>
+                          <span class="fa fa-angle-down"></span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+
+
+            <!-- 能滚动的商品 -->
+            <div class="mui-scroll-wrapper">
+                <div class="mui-scroll">
+
+                    <!--商品区域-->
+                    <div class="lt_product mui-clearfix">
+
+                        <a href="#" class="item">
+                            <img src="images/product.jpg" alt="">
+                            <p class="mui-ellipsis-2">adidas阿迪达斯 男式 场下休闲篮球鞋S83700场下休闲篮球鞋S83700 </p>
+                            <p>
+                                <span class="price">&yen;560</span>
+                                <span class="oldPrice">&yen;580</span>
+                            </p>
+                            <button class="mui-btn mui-btn-blue">立即购买</button>
+                        </a>
+                       
+                        <a href="#" class="item">
+                            <img src="images/product.jpg" alt="">
+                            <p class="mui-ellipsis-2">adidas阿迪达斯 男式 场下休闲篮球鞋S83700场下休闲篮球鞋S83700 </p>
+                            <p>
+                                <span class="price">&yen;560</span>
+                                <span class="oldPrice">&yen;580</span>
+                            </p>
+                            <button class="mui-btn mui-btn-blue">立即购买</button>
+                        </a>
+
+                        <a href="#" class="item">
+                            <img src="images/product.jpg" alt="">
+                            <p class="mui-ellipsis-2">adidas阿迪达斯 男式 场下休闲篮球鞋S83700场下休闲篮球鞋S83700 </p>
+                            <p>
+                                <span class="price">&yen;560</span>
+                                <span class="oldPrice">&yen;580</span>
+                            </p>
+                            <button class="mui-btn mui-btn-blue">立即购买</button>
+                        </a>
+
+                        <a href="#" class="item">
+                            <img src="images/product.jpg" alt="">
+                            <p class="mui-ellipsis-2">adidas阿迪达斯 男式 场下休闲篮球鞋S83700场下休闲篮球鞋S83700 </p>
+                            <p>
+                                <span class="price">&yen;560</span>
+                                <span class="oldPrice">&yen;580</span>
+                            </p>
+                            <button class="mui-btn mui-btn-blue">立即购买</button>
+                        </a>
+                        
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+        <!-- 尾部 -->
+        <div class="lt_footer">
+            <ul class="mui-clearfix">
+                <li>
+                    <a href="index.html">
+                        <span class="fa fa-home"></span>
+                        <p>首页</p>
+                    </a>
+                </li>
+                <li >
+                    <a href="category.html">
+                        <span class="fa fa-bars"></span>
+                        <p>分类</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="cart.html">
+                        <span class="fa fa-shopping-cart"></span>
+                        <p>购物车</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="user.html">
+                        <span class="fa fa-user"></span>
+                        <p>会员中心</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+
+    <script src="lib/mui/js/mui.js"></script>
+    <script src="./lib/artTemplate/template-web.js"></script>
+    <script src="./lib/zepto/zepto.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="./js/searchList.js"></script>
+
+
+    <!-- 搜索历史模板 -->
+    <script type="text/html" id="tpl">
+        {{each data v i}}
+          <div class="item">
+            {{if v.pic.length === 0}}
+            <img src="images/none.png" alt="">
+            {{else}}
+            <img src="{{v.pic[0].picAddr}}" alt="">
+            {{/if}}
+
+            <p class="mui-ellipsis-2">{{v.num}}---{{v.proName}} </p>
+            <p>
+                <span class="price">&yen;{{v.price}}</span>
+                <del class="oldPrice">&yen;{{v.oldPrice}}</del>
+            </p>
+            <a href="product.html?id={{v.id}}" class="goumai"><button class="mui-btn mui-btn-blue" id="btn-buy">立即购买</button></a>
+        </div>
+          {{/each}} 
+    </script>
+
+
+
+
+
+
+</body>
+
+</html>

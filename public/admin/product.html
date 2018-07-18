@@ -1,97 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.css">
-    <link rel="stylesheet" href="./lib/bootstrap-validator/css/bootstrapValidator.css">
-    <link rel="stylesheet" href="./lib/nprogress/nprogress.css">
-    <link rel="stylesheet" href="./css/common.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>一级分类管理</title>
+  <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="lib/bootstrap-validator/css/bootstrapValidator.css">
+  <link rel="stylesheet" href="lib/nprogress/nprogress.css">
+  <link rel="stylesheet" href="css/common.css">
 </head>
+
 <body>
-    <!-- 分为2个部分.左边侧边栏,右边是主体内容 -->
-    <div class="lt_aside">
-       <!-- 可分为三部分 -->
-       <!-- 品牌 -->
-       <div class="brand">
-            <a href="index.html">黑马23期</a>
-       </div>
-        
-       <!-- 用户信息 -->
-       <div class="user">
-           <img src="./images/timg.jpg" alt="">
-           <p>超级管理员</p>
-       </div>
-        
-        <!-- 导航栏 -->
-       <div class="nav">
-         <lu>
-             <li>
-                 <a href="user.html">
-                     <span class="glyphicon glyphicon-user"></span>
-                     <span>用户管理</span>
-                 </a>
-             </li>
-             <li>
-                    <a href="javascript:;">
-                            <span class="glyphicon glyphicon-list"></span>
-                            <span>分类管理</span>
-                          </a>
-                          <!-- 下级菜单放到外面,用盒子包起来 -->
-                          <div class="second" style="display: none;">
-                            <a href="first.html">一级分类</a>
-                            <a href="second.html">二级分类</a>
-                          </div>
-             </li>
-             <li>
-                    <a href="product.html" class="active">
-                            <span class="glyphicon glyphicon-tags"></span>
-                            <span>商品管理</span>
-                     </a>
-             </li>
-         </lu>
 
-       </div>
+  <div class="lt_aside">
 
-
+    <div class="brand">
+      <a href="index.html">黑马23期</a>
     </div>
-    
-
-    <!-- 右边的主体栏 -->
-    <div class="lt_main">
-        <div class="lt_topbar">
-            <a href="javascript:;" class="pull-left icon_menu"><span class="glyphicon glyphicon-align-justify"></span></a>
-            <a href="javascript:;" class="pull-right icon_logout"><span class="glyphicon glyphicon-log-out"></span></a>
-        </div>
-
-     
-        <div class="container-fluid magtop_50">
-            <!-- 面包屑导航 -->
-            <ol class="breadcrumb">
-              <li>
-                <a href="#">系统管理</a>
-              </li>
-              <li class="active">商品管理</li>
-            </ol>
-      
-      
-            <!-- 每个页面具体的内容 -->
-            <div class="lt_content">
-              <!-- <div class="charts_left pull-left">11</div>
-              <div class="charts_right pull-right">22</div> -->
-            </div>
+    <div class="user">
+      <img src="images/default.jpg" alt="">
+      <p>超级管理员</p>
+    </div>
+    <div class="nav">
+      <ul>
+        <li>
+          <a href="user.html">
+            <span class="glyphicon glyphicon-user"></span>
+            <span>用户管理</span>
+          </a>
+        </li>
+        <li>
+          <a href="javascript:;">
+            <span class="glyphicon glyphicon-list"></span>
+            <span>分类管理</span>
+          </a>
+          <div class="second" style="display: none;">
+            <a href="first.html">一级分类</a>
+            <a href="second.html">二级分类</a>
           </div>
-
-
-
-
+        </li>
+        <li>
+          <a href="product.html">
+            <span class="glyphicon glyphicon-tags"></span>
+            <span class="active">商品管理</span>
+          </a>
+        </li>
+      </ul>
     </div>
-    
 
-      <!-- 退出框 -->
-      <!-- bootstrap中， role aria  sr-only: 盲人设备 -->
+  </div>
+  <div class="lt_main">
+    <div class="lt_topbar">
+      <a href="javascript:;" class="pull-left icon_menu">
+        <span class="glyphicon glyphicon-align-justify"></span>
+      </a>
+      <a href="javascript:;" class="pull-right icon_logout">
+        <span class="glyphicon glyphicon glyphicon-log-out"></span>
+      </a>
+    </div>
+
+    <div class="container-fluid">
+      <!-- 面包屑导航 -->
+      <ol class="breadcrumb magtop_70">
+        <li>
+          <a href="#">系统管理</a>
+        </li>
+        <li class="active">商品管理</li>
+      </ol>
+
+
+      <!-- 每个页面具体的内容 -->
+      <div class="lt_content">
+
+        <button class="btn btn-default btn_add mb_20">添加商品</button>
+
+        <table class="table table-bordered table-striped">
+          <thead>
+              <tr>
+                  <th width="10%">序号</th>
+                  <th width="25%">商品名称</th>
+                  <th width="25%">商品描述</th>
+                  <th width="10%">商品库存</th>
+                  <th width="10%">商品尺寸</th>
+                  <th width="10%">商品状态</th>
+                  <th width="10%">操作</th>
+                </tr>
+          </thead>
+          <tbody>
+            <!-- 挖个坑 -->
+        
+          
+          </tbody>
+        </table>
+
+        <!-- 分页 -->
+        <div class="text-right">
+          <ul id="paginator"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- bootstrap中， role aria  sr-only: 盲人设备 -->
   <div class="modal fade" tabindex="-1" id="logoutModal">
     <div class="modal-dialog modal-sm">
       <div class="modal-content">
@@ -112,18 +124,156 @@
           <button type="button" class="btn btn-primary btn_logout">退出</button>
         </div>
       </div>
-      <!-- /.modal-content -->
     </div>
-    <!-- /.modal-dialog -->
-  </div>
-  <!-- /.modal -->
 
+  </div>
+
+  <!-- 添加一级分类的模态框 -->
+  <div class="modal fade" tabindex="-1" id="addModal">
+    <div class="modal-dialog modal-md">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <h4 class="modal-title">添加商品</h4>
+        </div>
+        <!-- form必须要包裹住submit按钮 -->
+        <form>
+          <div class="modal-body">
+            <!-- 注意：结构还是需要满足bootstrap的风格 -->
+             <!-- 每一项的表单元素,要用form-group 包裹起来 -->
+            <div class="form-group">
+                <div class="dropdown">
+                  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+                    <span class="dropdown-text">请选择级二级分类</span>
+                    <span class="caret"></span>
+                  </button>
+                  <!-- ,所属分类id,categoryId, 火热的品牌,hot自定义 -->
+                  <input type="hidden" name="brandId">
+                  <input type="hidden" name="statu" value="1">
+                  <ul class="dropdown-menu">
+                    <!-- 再挖个坑 -->
+                    <!-- <li><a data-id="{{v.id}}" href="#">啊啊啊啊发的</a></li>
+                    <li><a data-id="{{v.id}}" href="#">啊啊啊啊发的</a></li>
+                    <li><a data-id="{{v.id}}" href="#">啊啊啊啊发的</a></li>
+                    <li><a data-id="{{v.id}}" href="#">啊啊啊啊发的</a></li>
+                    <li><a data-id="{{v.id}}" href="#">啊啊啊啊发的</a></li>
+                    <li><a data-id="{{v.id}}" href="#">啊啊啊啊发的</a></li>
+                    <li><a data-id="{{v.id}}" href="#">啊啊啊啊发的</a></li>
+                    <li><a data-id="{{v.id}}" href="#">啊啊啊啊发的</a></li>
+                    <li><a data-id="{{v.id}}" href="#">啊啊啊啊发的</a></li> -->
+                  </ul>
+                </div>
+              </div>
+
+            
+                <!--  商品名称 proName -->
+              <div class="form-group">
+                  <input type="text" name="proName" class="form-control" placeholder="请输入商品的名称">
+                </div>
+                 
+
+                 <!-- 商品描述 name="proDesc"  -->
+                <div class="form-group">
+                
+                  <textarea class="form-control" rows="3" name="proDesc" placeholder="请输入商品的描述" data-bv-field="proDesc"></textarea>
+                  </div>
+
+                 <!--  商品库存 num -->
+              <div class="form-group">
+                <input type="text" name="num" class="form-control" placeholder="商品的库存">
+              </div>
+
+                    <!--  商品尺码 size-->
+              <div class="form-group">
+                <input type="text" name="size" class="form-control" placeholder="商品的尺码">
+              </div>
+                  
+                   <!--  商品原价 oldPrice -->
+                   <div class="form-group">
+                    <input type="text" name="oldPrice" class="form-control" placeholder="商品的原价">
+                  </div>
+    
+                  <!--  商品价格 price -->
+                  <div class="form-group">
+                    <input type="text" name="price" class="form-control" placeholder="商品的价格">
+                  </div>
+    
+
+                <!-- 上传图片按钮 -->
+              
+                <div class="form-group">
+                     <!-- label for="id名" 拥有id的,点击label,就等于点击拥有id的input-->
+                     <label for="fileupload" class="btn btn-default">上传图片</label>
+                     <!-- type 为文件  name="pic1"传参参数 和路径 .. multiple 允许传多张图片 -->
+                     <input type="file" id="fileupload" style="display:none" multiple name="pic1" data-url="/product/addProductPic">
+                 </div>
+                  
+                 <!-- 图片显示的区域 -->
+                 <div class="form-group">
+                    <div class="img_box">
+                       
+                    </div>
+                    <!-- 品牌logo图片地址 -->
+                    <input type="hidden" name="brandLogo">
+                  </div>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+            <button type="submit" class="btn btn-primary">添加</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+  </div>
+
+
+
+  <script src="lib/jquery/jquery.js"></script>
+  <!--文件上传插件,依赖jQuery 再引两个包,ui.widget 在前 fileupload在后 -->
+  <script src="./lib/jquery-fileupload/jquery.ui.widget.js"></script>
+  <script src="./lib/jquery-fileupload/jquery.fileupload.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.js"></script>
+  <script src="lib/bootstrap-validator/js/bootstrapValidator.js"></script>
+  <script src="lib/bootstrap-paginator/bootstrap-paginator.js"></script>
+  <script src="lib/nprogress/nprogress.js"></script>
+  <script src="lib/artTemplate/template-web.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/product.js"></script>
+
+
+
+
+  <script type="text/html" id="tpl">
+    {{each rows v i}}
+    <tr>
+      <td>{{(page-1)*size+i+1}}</td>
+      <td>{{ v.proName }}</td>
+      <td>{{ v.proDesc }}</td>
+      <td>{{ v.num }}</td>
+      <td>{{v.size}}</td>
+      <td>已上架</td>
+      <td>
+        
+        <button class="btn btn-danger btn-sm">下架</button>
+        
+      </td>
+    </tr>
+    {{/each}}
+  </script>
+  
+   <!-- 第二个模板,点击添加时就渲染了,下拉内容 -->
+  <script type="text/html" id="tpl2">
+    {{each rows v i}}
+    <li><a data-id="{{v.id}}" href="javascript:;">{{v.brandName}}</a></li>
+    {{/each}}
+  </script>
 
 </body>
-<script src="./lib/jquery/jquery.js"></script>
-<script src="./lib/bootstrap/js/bootstrap.js"></script>
-<script src="./lib/bootstrap-validator/js/bootstrapValidator.js"></script>
-<script src="./lib/nprogress/nprogress.js"></script>
-<script src="./js/login.js"></script>
-<script src="./js/common.js"></script>
+
+
+
 </html>

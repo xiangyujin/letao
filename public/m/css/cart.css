@@ -1,0 +1,66 @@
+.lt_container {
+  padding-bottom: 85px;
+}
+.cart_left {
+  width: 60px;
+  height: 60px;
+  float: left;
+  margin-right: 10px;
+}
+.cart_right {
+  overflow: hidden;
+}
+.cart_right .proName {
+  color: #333;
+  margin-bottom: 3px;
+  height: 42px;
+}
+.cart_right .price {
+  color: red;
+}
+.cart_right .oldPrice {
+  text-decoration: line-through;
+}
+.ck {
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+}
+.lt_order {
+  height: 30px;
+  line-height: 30px;
+  background-color: #ccc;
+  position: absolute;
+  width: 100%;
+  bottom: 55px;
+  z-index: 999;
+  font-size: 12px;
+  padding-left: 10px;
+}
+.lt_order .pull-left {
+  color: red;
+}
+.lt_order .pull-right a {
+  background-color: red;
+  color: #fff;
+  display: block;
+  height: 30px;
+  padding: 0 10px;
+}
+.mui-table-cell {
+  display: block;
+}
+.proSize span {
+  padding: 5px;
+  border: 1px solid #ccc;
+  background-color: pink;
+  font-size: 12px;
+  line-height: 30px;
+}
+.proSize span.active {
+  background-color: #069;
+}
+.proSize,
+.proNum {
+  text-align: left;
+}

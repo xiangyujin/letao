@@ -1,0 +1,25 @@
+.lt_main {
+  padding: 10px;
+}
+.lt_main .lt_histoyr {
+  padding: 10px;
+  height: 30px;
+  line-height: 30px;
+  font-size: 12px;
+}
+.lt_main .lt_histoyr ul {
+  border: 1px dashed red;
+}
+.lt_main .lt_histoyr li {
+  height: 30px;
+  line-height: 30px;
+  padding-left: 10px;
+  border-bottom: 1px dashed red;
+}
+.lt_main .lt_histoyr li span {
+  height: 30px;
+  line-height: 30px;
+}
+.lt_main .lt_histoyr li:last-child {
+  border-bottom: none;
+}

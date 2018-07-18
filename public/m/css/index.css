@@ -1,0 +1,10 @@
+.lt_main {
+  background-color: #fff;
+}
+.lt_main .lt_nav {
+  padding: 10px;
+}
+.lt_main .lt_nav li {
+  width: 33.33%;
+  float: left;
+}

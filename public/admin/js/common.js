@@ -13,6 +13,7 @@ $(".icon_menu").on("click",function(){
      console.log( "aaa" );
     $("body").toggleClass("active");
     $(".lt_aside").toggleClass("active");
+    $(".lt_topbar").toggleClass("active");
 })
 
 

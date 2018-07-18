@@ -22,6 +22,9 @@ a:active{
 .mt_150{
     margin-top: 150px;
 }
+.mb_20{
+    margin-bottom: 20px;
+}
 
 body{
     padding-left: 180px;
@@ -112,6 +115,11 @@ border-left: 3px solid transparent;
    z-index: 998;
     transition: all 1s;
 }
+.lt_topbar.active{
+    padding-left: 20px;
+}
+
+
 .lt_topbar a {
     font-size: 16px;
     color: #fff;
@@ -120,8 +128,8 @@ border-left: 3px solid transparent;
 
 
 /* 面包屑 */
-.magtop_50{
-  margin-top: 50px;
+.magtop_70{
+  margin-top: 70px;
 }
   
 .lt_content{
